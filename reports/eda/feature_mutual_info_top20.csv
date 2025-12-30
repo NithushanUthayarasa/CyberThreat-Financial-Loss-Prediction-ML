@@ -1,0 +1,20 @@
+,0
+Target Industry_Telecommunications,0.01993888951936995
+Target Industry_Retail,0.016573132699962523
+Target Industry_Government,0.01601372560708003
+Attack Source_Unknown,0.009616682333137838
+Attack Source_Insider,0.004317425467419644
+Target Industry_Education,0.003089919551453324
+Incident Resolution Time (in Hours),0.0029955305912616748
+Security Vulnerability Type_Unpatched Software,0.0025545755785412183
+Attack Type_SQL Injection,0.002152446825294252
+Attack Type_Phishing,0.0014864935424672154
+Target Industry_Healthcare,0.00039170677239330765
+Attack Type_Malware,0.0
+Number of Affected Users,0.0
+Attack Type_Man-in-the-Middle,0.0
+Attack Type_Ransomware,0.0
+Target Industry_IT,0.0
+Attack Source_Nation-state,0.0
+Security Vulnerability Type_Weak Passwords,0.0
+Security Vulnerability Type_Zero-day,0.0
