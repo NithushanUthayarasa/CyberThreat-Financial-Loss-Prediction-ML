@@ -1,0 +1,25 @@
+# Ignore data folders
+data/interim/
+data/processed/
+*.npy
+
+# Ignore deployment and models
+deployment/
+models/
+
+# Ignore utils
+utils/
+
+# Ignore outputs folder
+outputs/
+
+# Ignore Jupyter notebook checkpoints and CatBoost info
+notebooks/.ipynb_checkpoints/
+notebooks/catboost_info/
+
+# Ignore notebook outputs
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+
+# Ignore joblib files
+*.joblib
