@@ -44,7 +44,7 @@ Provide organizations with a risk prediction system to:
 
 ## 🧾 Dataset & Features
 
-* **Source:** Kaggle – Global Cybersecurity Threats (2015–2024)  
+*  **Source:** [Kaggle - Global Cybersecurity Threats, 2015–2024](https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024)
 * **Size:** ~3,000 incidents  
 
 **Features:**
@@ -162,6 +162,15 @@ CyberThreats_FinancialLoss_Prediction_ML/
 
 ```
 ---
+
+# 🔧 How to Run the Project
+
+```bash
+git clone https://github.com/NithushanUthayarasa/CyberThreat-Financial-Loss-Prediction-ML
+cd CyberThreats_FinancialLoss_Prediction_ML
+pip install -r requirements.txt
+jupyter notebook
+```
 
 ## 🌍 Business & Social Impact
 
