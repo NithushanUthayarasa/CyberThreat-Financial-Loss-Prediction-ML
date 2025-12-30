@@ -1,13 +1,17 @@
 # 🔐 Cyber Threats & Financial Loss Prediction (2015–2024)
 
-An end-to-end machine learning project predicting high financial losses from cyber threats using structured, data-leak-free global incident data. The project implements a complete ML pipeline, from preprocessing to training a binary classification model that identifies high-risk incidents, to deployment of the best-performing model for real-world predictions.
-
+An **end-to-end machine learning project** predicting high financial losses from cyber threats using structured, **data-leak-free** global incident data. The pipeline covers preprocessing, feature engineering, training multiple models, hyperparameter tuning, feature importance analysis, benchmarking, and deployment of the best-performing model for production-ready predictions.
 
 ---
 
 ## 📌 Project Overview
 
-Cybersecurity incidents increasingly cause significant financial losses across industries. Estimating losses is challenging due to complex, non-linear factors such as attack type, affected industry, incident resolution time, and number of affected users.
+Cybersecurity incidents increasingly cause significant financial losses across industries. Estimating losses is challenging due to complex, non-linear factors such as:
+
+* Attack type
+* Affected industry
+* Incident resolution time
+* Number of affected users
 
 **This project provides:**
 
@@ -20,15 +24,15 @@ Cybersecurity incidents increasingly cause significant financial losses across i
 
 ## 🚨 Problem Statement
 
-Organizations often struggle to quantify financial losses from cyber attacks because traditional risk assessment methods cannot capture the complex, non-linear relationships between:
+Organizations often struggle to quantify financial losses from cyber attacks because traditional risk assessment methods cannot capture complex, non-linear relationships between:
 
-* Rapidly evolving cyber threat types  
-* Variations in incident resolution time  
-* Industry-specific vulnerabilities and defense mechanisms  
+* Rapidly evolving cyber threat types
+* Variations in incident resolution time
+* Industry-specific vulnerabilities and defense mechanisms
 
-As a result, businesses may face inefficient resource allocation, delayed or ineffective incident response, and misaligned cybersecurity investments.
+As a result, businesses may face inefficient resource allocation, delayed incident response, and misaligned cybersecurity investments.
 
-**Solution:** This project reframes the challenge as a binary classification task, predicting high-risk cyber incidents and supporting proactive, data-driven decision-making.
+**Solution:** Frame the challenge as a binary classification task to predict high-risk cyber incidents and support proactive, data-driven decision-making.
 
 ---
 
@@ -45,13 +49,13 @@ Provide organizations with a risk prediction system to:
 
 ## 🧾 Dataset & Features
 
-*  **Source:** [Kaggle - Global Cybersecurity Threats, 2015–2024](https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024)
+* **Source:** Kaggle – Global Cybersecurity Threats (2015–2024)  
 * **Size:** ~3,000 incidents  
 
 **Features:**
 
 * Number of Affected Users
-* Incident Resolution Time (Hours)
+* Incident Resolution Time (in Hours)
 * Attack Type
 * Target Industry
 * Attack Source
@@ -59,95 +63,96 @@ Provide organizations with a risk prediction system to:
 * Interaction Feature: `AttackType_TargetIndustry`
 * Users_per_Hour, Log_Users
 
-_Post-preprocessing, 25–65 features are used depending on the model._
+> Post-processing: 25–65 features are used depending on the model.
 
 ---
 
 ## 🔄 End-to-End ML Pipeline
 
-1. **Feature Selection & Binary Target Creation** – Define binary target using high-loss threshold.  
-2. **Preprocessing Pipeline** – Scale numeric features, encode categoricals, split train/test datasets.  
-3. **Baseline Model Training** – RandomForest, ExtraTrees, XGBoost, LightGBM, CatBoost.  
-4. **Hyperparameter Tuning & Probability Cutoff** – Optimize models and tune probability thresholds.  
-5. **Baseline vs Model Comparison** – Evaluate improvements in Accuracy, Macro F1, Macro Recall.  
-6. **Feature Importance & Analysis** – Aggregate expanded features to main business-level features.  
-7. **Model Benchmarking** – Train, test, and cross-validate models; compare metrics and inference time.  
-8. **Deployment** – Save best model (`production_model.joblib`) and implement prediction workflow.
+* Feature Selection & Binary Target Creation – High-loss threshold to define binary target
+* Preprocessing Pipeline – Scale numeric features, encode categoricals, split train/test datasets
+* Baseline Model Training – RandomForest, ExtraTrees, XGBoost, LightGBM, CatBoost
+* Hyperparameter Tuning & Probability Cutoff – Optimize models and tune probability thresholds
+* Baseline vs Tuned Model Comparison – Evaluate Accuracy, Macro F1, Macro Recall
+* Feature Importance & Analysis – Aggregate expanded features to main business-level features
+* Model Benchmarking – Train, test, cross-validate; compare metrics and inference time
+* Deployment – Save best model (`production_model.joblib`) and implement prediction workflow
 
 ---
 
 ## 🧠 Feature Engineering & Preprocessing
 
-* Handle missing values (median for numeric, mode for categorical)  
-* Create interaction features (`AttackType_TargetIndustry`)  
-* Scale numeric variables; one-hot encode categoricals  
-* Train/test split: 4:1 ratio  
-* Binary target defined via high-loss threshold  
+* Handle missing values (median for numeric, mode for categorical)
+* Create interaction features (`AttackType_TargetIndustry`)
+* Scale numeric variables; one-hot encode categoricals
+* Train/test split: 4:1 ratio
+* Binary target defined via high-loss percentile threshold
 
 ---
 
 ## 🧪 Machine Learning Models Used
 
-* Random Forest  
-* Extra Trees  
-* XGBoost  
-* LightGBM  
-* CatBoost  
+* Random Forest
+* Extra Trees
+* XGBoost
+* LightGBM
+* CatBoost
 
 ---
 
 ## 🔍 Evaluation Metrics
 
-* Accuracy  
-* Precision  
-* Recall  
-* Macro F1  
-* ROC-AUC  
-* Inference Time per Sample  
+* Accuracy
+* Precision
+* Recall
+* Macro F1
+* ROC-AUC
+* Inference Time per Sample
 
 ---
 
 ## 📊 Results Summary
 
-**Model Comparison (Step 5–8)**
+**Model Comparison (Test Set)**
 
 | Model       | Accuracy | Macro F1 | Macro Recall |
-|------------|---------|----------|-------------|
-| CatBoost    | 0.545   | 0.527    | 0.531       |
-| ExtraTrees  | 0.485   | 0.480    | 0.480       |
-| LightGBM    | 0.530   | 0.510    | 0.515       |
-| RandomForest| 0.523   | 0.517    | 0.517       |
-| XGBoost     | 0.530   | 0.530    | 0.532       |
+|------------|---------|-----------|-------------|
+| CatBoost   | 0.545   | 0.527     | 0.531       |
+| RandomForest | 0.545 | 0.512     | 0.524       |
+| LightGBM   | 0.520   | 0.509     | 0.510       |
+| XGBoost    | 0.525   | 0.503     | 0.509       |
+| ExtraTrees | 0.503   | 0.487     | 0.490       |
 
-**Best Model:** CatBoost (based on Macro F1)  
+**Best Model:** CatBoost (based on Macro F1)
 
 **Key Features Driving Predictions:**
 
-* Number of Affected Users  
-* Incident Resolution Time (Hours)  
-* `AttackType_TargetIndustry`  
-* Attack Source  
+* Number of Affected Users
+* Incident Resolution Time (Hours)
+* AttackType_TargetIndustry
+* Attack Source
 
 ---
 
 ## 🛠 Handling High Variance & Bias
 
-* Tuned regularization parameters (`l2_leaf_reg`, `max_depth`, etc.)  
-* Cross-validation for robust performance  
-* Feature aggregation to reduce noise  
-* Avoided overfitting by limiting model complexity  
+* Tuned regularization parameters (e.g., `l2_leaf_reg`, `max_depth`)
+* Cross-validation for robust performance
+* Feature aggregation to reduce noise
+* Avoided overfitting by limiting model complexity
 
 ---
 
 ## 🚀 Deployment
 
-* Production model saved: `deployment/production_model.joblib`  
-* Prediction workflow supports new incident data using preprocessor and probability cutoff  
-* Fully reproducible pipeline for operational use  
+* Production model saved: `deployment/production_model.joblib`
+* Prediction workflow supports new incident data using preprocessor and probability cutoff
+* Fully reproducible pipeline for operational use
 
 ---
 
 ## 📁 Project Structure
+
 
 ```text
 CyberThreats_FinancialLoss_Prediction_ML/
@@ -156,9 +161,9 @@ CyberThreats_FinancialLoss_Prediction_ML/
 │   ├── interim/      # Cleaned & selected features
 │   └── processed/    # Step-wise processed data
 │
-│── notebooks/        # Step 1 → Step 8 notebooks
+│── notebooks/        # Step 1–8: Jupyter notebooks
 │── models/           # Trained models (.joblib)
-│── reports/          # Eda
+│── reports/          # EDA & benchmarking
 │── README.md         # Project documentation
 
 ```
