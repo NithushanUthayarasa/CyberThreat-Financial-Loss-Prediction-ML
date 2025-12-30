@@ -19,18 +19,15 @@ Cybersecurity incidents increasingly cause significant financial losses across i
 
 ## 🚨 Problem Statement
 
-Organizations often struggle to quantify financial loss from cyber attacks because of:
+Organizations often struggle to quantify financial losses from cyber attacks because traditional risk assessment methods cannot capture the complex, non-linear relationships between:
 
-* Rapidly evolving cyber threat types
-* Variability in incident resolution times
-* Industry-specific vulnerabilities and defenses
+* Rapidly evolving cyber threat types  
+* Variations in incident resolution time  
+* Industry-specific vulnerabilities and defense mechanisms  
 
-**Solution:** Reframe as binary classification using a high-loss threshold:
+As a result, businesses may face inefficient resource allocation, delayed or ineffective incident response, and misaligned cybersecurity investments.
 
-* **High Loss (1):** Incidents above optimized threshold (maximizes Macro F1)  
-* **Low/Moderate Loss (0):** Incidents below or equal to threshold  
-
-_No separate low-loss threshold is required._
+**Solution:** This project reframes the challenge as a binary classification task, predicting high-risk cyber incidents and supporting proactive, data-driven decision-making.
 
 ---
 
