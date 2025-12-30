@@ -48,7 +48,7 @@ Provide organizations with a risk prediction system to:
 ---
 
 ## 🧾 Dataset & Features
-**Source:** [Kaggle - Global Cybersecurity Threats, 2015–2024](https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024)
+* **Source:** [Kaggle – Global Cybersecurity Threats (2015–2024)](https://www.kaggle.com/datasets/atharvasoundankar/global-cybersecurity-threats-2015-2024)  
 * **Size:** ~3,000 incidents  
 
 **Features:**
