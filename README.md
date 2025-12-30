@@ -1,6 +1,7 @@
 # 🔐 Cyber Threats & Financial Loss Prediction (2015–2024)
 
-An end-to-end machine learning project predicting high financial losses from cyber threats using structured, data-leak-free global incident data. The project implements a complete ML pipeline, from preprocessing to deployment of the best-performing model for real-world predictions.
+An end-to-end machine learning project predicting high financial losses from cyber threats using structured, data-leak-free global incident data. The project implements a complete ML pipeline, from preprocessing to training a binary classification model that identifies high-risk incidents, to deployment of the best-performing model for real-world predictions.
+
 
 ---
 
@@ -157,7 +158,7 @@ CyberThreats_FinancialLoss_Prediction_ML/
 │
 │── notebooks/        # Step 1 → Step 8 notebooks
 │── models/           # Trained models (.joblib)
-│── reports/          # eda
+│── reports/          # Eda
 │── README.md         # Project documentation
 
 ```
